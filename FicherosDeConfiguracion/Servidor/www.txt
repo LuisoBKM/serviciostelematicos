@@ -1,0 +1,5 @@
+En el directorio www del Servidor es donde tenemos alojados los diferentes 'Proyectos Web' que 
+queremos visaulizar con nuestro servidor Apahce.
+
+En este repositorio no lo he incluido puesto que es algo sencillo de crear según montamos todos
+los servicios y seguimos la Documentación.
