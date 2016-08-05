@@ -1,0 +1,21 @@
+;
+; Archivo de configuracion de la zona st.um.
+;
+$TTL	86400
+$ORIGIN st.um.
+@	IN	SOA	dns.st.um. usuario1.st.um (
+			      1		; Serial
+			      3600	; Refresh
+			      1800	; Retry
+			      604800	; Expire
+			      3600 )	; Negative Cache TTL
+	IN NS dns
+
+www		3600 	IN	A	192.168.178.81
+www1            3600    IN      A       192.168.178.81
+www2		3600	IN	A	192.168.178.81
+web		3600	IN 	A 	192.168.178.81
+dns		3600	IN	A	192.168.178.81
+smtp            3600    IN      A       192.168.178.81
+pop             3600    IN      A       192.168.178.81
+ntp		3600	IN	A	192.168.178.81
