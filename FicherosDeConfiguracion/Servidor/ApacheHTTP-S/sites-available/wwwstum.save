@@ -1,0 +1,13 @@
+<VirtualHost *:80>
+	ServerAdmin usuario1@st.um
+	ServerName www.st.um
+	DocumentRoot /var/www/wwwstum
+	<Directory /var/www/wwwstum>
+		
+Options Indexes FollowSymLinks MultiViews
+		AllowOverride None
+		Order allow,deny
+		allow from all
+	</Directory>
+</VirtualHost>
+

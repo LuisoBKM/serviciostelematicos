@@ -1,0 +1,18 @@
+<VirtualHost *:80>
+	ServerAdmin usuario1@st.um
+	ServerName www.st.um
+	DocumentRoot /var/www/wwwstum
+	<Directory /var/www/wwwstum>
+		AllowOverride AuthConfig
+		AuthType Basic
+		AuthName "Acceso restringido a usuario1"
+		AuthBasicProvider file
+		AuthUserFile /etc/apache2/passwords
+		Require user usuario1
+		Options Indexes FollowSymLinks MultiViews
+		AllowOverride None
+		Order allow,deny
+		allow from all
+	</Directory>
+</VirtualHost>
+

@@ -1,0 +1,27 @@
+<VirtualHost *:443>
+	ServerAdmin usuario1@st.um
+	ServerName www.st.um
+	DocumentRoot /var/www/wwwstum
+	<Directory /var/www/wwwstum>
+		Options Indexes FollowSymLinks MultiViews
+		AllowOverride None
+		Order allow,deny
+		allow from all
+		AllowOverride AuthConfig
+           AuthType Basic
+           AuthName "Acceso restringido a usuario1"
+           AuthBasicProvider file
+           AuthUserFile /etc/apache2/passwords
+           Require user usuario1
+           Order allow,deny
+           allow from all
+        </Directory> 
+
+        SSLEngine on
+        SSLCertificateFile /home/servidor/demoCA/servercert.pem
+        SSLCertificateKeyFile /home/servidor/demoCA/serverkey.pem
+        SSLCACertificateFile /home/servidor/demoCA/cacert.pem
+        SSLVerifyClient require
+        SSLVerifyDepth 10
+</VirtualHost>
+

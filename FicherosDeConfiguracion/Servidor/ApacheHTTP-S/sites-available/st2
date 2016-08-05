@@ -1,0 +1,12 @@
+<VirtualHost *:80>
+	ServerAdmin usuario2@st.um
+	ServerName www2.st.um
+	DocumentRoot /var/www/web2
+	<Directory /var/www/web2>
+		Options Indexes FollowSymLinks MultiViews
+		AllowOverride None
+		Order allow,deny
+		allow from all
+	</Directory>
+</VirtualHost>
+
